@@ -21,6 +21,7 @@ public class WikiTest extends DriverFactory {
 		WikiTestResultado Resultado = HomePage.searchText("Selenium");
 		Assert.assertTrue(Resultado.tituloEsVisible(), "El titulo no esta visible");
 		driver.close();
+		
 		/*System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://wikipedia.org");
