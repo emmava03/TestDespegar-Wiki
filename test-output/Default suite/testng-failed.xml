@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Despegar.WikiTest">
+      <class name="Despegar.DespegarPO">
         <methods>
-          <include name="ValidarBusquedaWikipedia"/>
+          <include name="testDespegarPO"/>
+          <include name="Comienzo"/>
+          <include name="Fin"/>
         </methods>
-      </class> <!-- Despegar.WikiTest -->
+      </class> <!-- Despegar.DespegarPO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

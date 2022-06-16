@@ -22,10 +22,11 @@ public void ValidarBusquedaDespegar() throws Exception {
 		Wait = new WebDriverWait(driver, 30);
 		driver.manage().window().maximize();
 		driver.get("https://www.despegar.com.ar/");
+		
+		
 		WebElement Hoteles = driver
 				.findElement(By.xpath("//label[contains(text(),'Alojamientos')]"));
 		Hoteles.click();
-		Thread.sleep(1000);
 		
 		
 		WebElement inputTag = driver.findElement(
@@ -60,7 +61,6 @@ public void ValidarBusquedaDespegar() throws Exception {
 		FechaSalidaDespegarIr.click();
 		
 		
-		
 		WebElement aplicarFecha = driver
 				.findElement(By.xpath("//button[@class='sbox5-3-btn -primary -md']"));
 		aplicarFecha.click();
@@ -71,7 +71,6 @@ public void ValidarBusquedaDespegar() throws Exception {
 		Hab.click();
 	    Wait.until(ExpectedConditions.elementToBeClickable
 	    		(By.xpath("//input[@class='sbox5-3-first-input']")));
-		
 		
 		
 		WebElement HabAdultos = driver.findElement
@@ -108,7 +107,7 @@ public void ValidarBusquedaDespegar() throws Exception {
 		WebElement VerDetalles = driver.findElement
 				(By.xpath("//button[@class='eva-3-btn -md -primary -eva-3-fwidth']"));
 		VerDetalles.click();
-		Thread.sleep(2000);
+		Wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='eva-3-btn -md -primary -eva-3-fwidth']")));
 		Assert.assertTrue(VerDetalles.isDisplayed());
 		driver.quit();
 		
